@@ -21,5 +21,12 @@ Since the baselines don't support batch optimization, you need to copy the files
 - Run "python demo_synfunc_1d_C25_b5.py" to optimize 2d synthetic function (1 categorical + 1 continuous) with the number of arms C=25 and the batch size=5 (fixed). Change variable "c_bound_dim" to run with different numbers of arms.
 - Run "python plot_results.py" to plot the results. Change four variables test_case = "1d_C6", n_arm = 6, budget = 40, and batch_list = [1] to plot the corresponding result.
 
+# Automated Machine Learning
+- Install three automated machine learning packages
+1. Hyperopt-sklearn: https://github.com/hyperopt/hyperopt-sklearn
+2. Auto-sklearn: https://github.com/automl/auto-sklearn 
+3. Tree-Based Pipeline Optimization Tool (TPOT): https://github.com/EpistasisLab/tpot
+- Run "python demo_auto_ml.py --dataset iris --method all" to test the performance of all methods on the dataset "iris".
+
 # Reference
 Dang Nguyen, Sunil Gupta, Santu Rana, Alistair Shilton, Svetha Venkatesh (2020). Bayesian Optimization for Categorical and Category-Specific Continuous Inputs. AAAI 2020, New York, USA
