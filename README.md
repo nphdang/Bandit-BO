@@ -13,7 +13,8 @@ To optimize such functions, we propose a new method that formulates the problem 
 1. Gpy 1.9.5 (to run Merchan-Lobato method)
 2. GpyOpt 1.2.5 (to run One-hot-Encoding and SMAC methods)
 3. Hyperopt 0.1.1 (to run TPE)
-## Note that since the baselines don't support batch optimization, you need to the files in folder "packages" to replace corresponding files in Gpy, GpyOpt, and Hyperopt after installing them.
+## Note 
+Since the baselines don't support batch optimization, you need to copy the files in folder "packages" to replace the corresponding files in Gpy, GpyOpt, and Hyperopt after installing them.
 
 # How to run
 - Run "python demo_synfunc_1d_C6_b1_5_10.py" to optimize 2d synthetic function (1 categorical + 1 continuous) with the number of arms C=6 (fixed) and the batch size=[1, 5, 10]. Change variable "batch_list" to run with different batch sizes.
