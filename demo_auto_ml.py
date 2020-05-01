@@ -4,7 +4,7 @@ import timeit
 import datetime
 import argparse
 from sklearn.metrics import accuracy_score
-from hyperopt import hp, tpe, fmin, Trials
+from hyperopt import hp, tpe
 from mab_diff.BanditBO_Diff import BanditBO_Diff
 import test_functions.auto_ml
 
