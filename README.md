@@ -1,8 +1,10 @@
-# Bandit-BO: Bayesian Optimization for Categorical and Category-Specific Continuous Inputs
+# Bandit-BO: Bayesian Optimization for Categorical and Continuous Inputs
 This is the implementation of the Bandit-BO method in the paper "Bayesian Optimization for Categorical and Category-Specific Continuous Inputs", AAAI 2020: https://aaai.org/Papers/AAAI/2020GB/AAAI-NguyenD.4977.pdf
 
 # Introduction
-Many real-world functions are defined over both categorical and category-specific continuous variables and thus cannot be optimized by traditional Bayesian optimization (BO) methods. For example, hyper-parameter tunning for a neural network involves both "activation" (categorical variable) and learning rate (continuous variable). Similarly, in automated machine learning where the goal is to find the best machine learning model along with its optimal hyper-parameters, we can view each model (e.g. decision tree) as a categorical variable and its hyper-parameters (e.g. depth) as continuous variables.
+Many real-world functions are defined over both categorical and continuous variables. For example, hyper-parameter tunning for a neural network involves both "activation" (categorical variable) and learning rate (continuous variable). In some functions, an additional challenge arises – each category is coupled with a different continuous search space. For example, in automated machine learning where the goal is to find the best machine learning model along with its optimal hyper-parameters, we can view each model (e.g. decision tree) as a categorical variable and its hyper-parameters (e.g. depth) as continuous variables.
+
+These kinds of functions (i.e the functions with categorical and continuous inputs and the functions with categorical and category-specific continuous inputs) cannot be optimized by traditional Bayesian optimization (BO) methods.
 
 To optimize such functions, we propose a new method that formulates the problem as a multi-armed bandit problem, wherein each category corresponds to an arm with its reward distribution centered around the optimum of the objective function in continuous variables. Our goal is to identify the best arm and the maximizer of the corresponding continuous function simultaneously. Our algorithm uses a Thompson sampling scheme that helps connecting both multi-arm bandit and BO in a unified framework.
 
